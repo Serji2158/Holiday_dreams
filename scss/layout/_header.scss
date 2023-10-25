@@ -1,0 +1,111 @@
+.header {
+  @extend %flex;
+  @extend %centered-block;
+  max-width: 480px;
+
+  background-image: url('../../images/header-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  margin-bottom: 63px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    margin-bottom: 67px;
+    background-image: url('../../images/header-bg-tablet.png');
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    margin-bottom: 70px;
+    background-image: url('../../images/header-bg-desk.png');
+  }
+}
+
+.nav {
+  margin-top: 30px;
+  margin-bottom: 123px;
+
+  &__wrap {
+    margin-bottom: 123px;
+
+    &__text {
+      color: $text-title;
+      padding: 6.5px 17px;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        border-radius: 17px;
+        cursor: pointer;
+      }
+
+      &:nth-child(2) {
+        margin-left: 9px;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 18px;
+    color: $text-title;
+    letter-spacing: 1px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 36px;
+    margin-bottom: 3px;
+
+    &__logo {
+      order: -1;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 940px;
+  }
+}
+
+.item {
+  color: $text-title;
+
+  &__title {
+    @extend %centered-block;
+    margin-bottom: 12px;
+    width: 307px;
+
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 247px;
+    margin-bottom: 17px;
+    @extend %centered-block;
+
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 300;
+
+    @media screen and (min-width: 1200px) {
+      width: 430px;
+      margin-bottom: 33px;
+
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+    @extend .button;
+
+    @media screen and (min-width: 1200px) {
+      width: 228px;
+    }
+  }
+}
