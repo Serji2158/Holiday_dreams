@@ -43,7 +43,23 @@
           <ul class="partner-list">
             <li class="partner-list__item item-one">
               <div class="wrap__img">
-                <img src="./images/bradley-man.png" alt="man in glasses" />
+                <picture>
+                  <source
+                    srcset="./images/bradley-man-desk@2x.png 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/bradley-man-tablet@2x.png 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/bradley-man-mobile@2x.png 2x"
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/bradley-man.png" alt="man in glasses" />
+                </picture>
+                <!-- <img src="./images/bradley-man.png" alt="man in glasses" /> -->
                 <div class="bg-item bg-item-one">
                   <svg class="partner-item-svg" width="20" height="20">
                     <use href="./icons/sprite.svg#icon-tv"></use>
@@ -81,7 +97,7 @@
               </div>
               <h3 class="partner-list__item__name-text">Heather Walker</h3>
               <p class="partner-list__text">
-                I'm a happy person that loves cats and climbing on mountains. 
+                I'm a happy person that loves cats and climbing on mountains.
               </p>
             </li>
             <li class="partner-list__item item-four">
